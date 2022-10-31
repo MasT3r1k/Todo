@@ -1,12 +1,16 @@
-<div class="card">
+<mat-card>
   <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="Sushi">
+    <mat-label>Úkol</mat-label>
+    <input #input matInput (keyup.enter)="add(input.value);input.value = ''">
+    <mat-hint>Sem vepište jakoukoliv věc, kterou chcete přidat do seznamu níže!</mat-hint>
   </mat-form-field>
 
-  <mat-selection-list #todos>
-    <mat-list-option *ngFor="let item of list">
+  <mat-list>
+    <mat-list-item *ngFor="let item of list">
       {{item}}
-    </mat-list-option>
-  </mat-selection-list>
-</div>
+      <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon" (click)="remove(item)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
