@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularTodo';
+  list = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
+
 }
