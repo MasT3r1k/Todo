@@ -1,7 +1,7 @@
 mat-card
 {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    min-width: 20vw;
+    min-width: 30vw;
 }
 
 mat-form-field
@@ -11,5 +11,11 @@ mat-form-field
 
 mat-list
 {
-    padding: 2rem;
+    padding: 2rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+    mat-card {
+        min-width: 50vw;
+    }
 }

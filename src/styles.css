@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/css2?family=Livvic:wght@100;200;300;400;500;600;700;900&display=swap");
+
+*:not(mat-icon) {
+    font-family: 'Livvic', sans-serif!important;
+}
 
 body
 {
@@ -12,8 +17,8 @@ body
     overflow-y: auto;
     min-height: 100vh;
     width: 100vw;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
 
 .mat-list-item-content
 {
