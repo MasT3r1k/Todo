@@ -1,4 +1,4 @@
-<mat-card>
+<!-- <mat-card>
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Úkol</mat-label>
     <input #input matInput (keyup.enter)="add(input.value);input.value = ''">
@@ -13,4 +13,36 @@
       </button>
     </mat-list-item>
   </mat-list>
-</mat-card>
+</mat-card> -->
+
+<div class="header center">TODO list</div>
+<div class="board">
+  <div class="categories" cdkDropListGroup>
+    <div class="category" *ngFor="let category of categories; let i = index;" cdkDropList [cdkDropListData]="category['items']" (cdkDropListDropped)="drop($event)" (load)="category.titleFocused = false">
+      <div class="head">
+        <textarea matInput (focus)="category.titleFocused = true" placeholder="Zadejte název kategorie" (focusout)="category.titleFocused = false;renameCategory(i, $event);" cdkTextareaAutosize="true" class="title">{{category.name}}</textarea>
+        <button mat-icon-button aria-disabled="false" (click)="remove(i)">
+          <mat-icon>{{ category.titleFocused ? "edit" : "delete"}}</mat-icon>
+        </button>
+      </div>
+      <div class="add-item" (click)="add(i, '')">
+        <mat-icon>add</mat-icon> Přidat item
+      </div>
+      <div class="items">
+        <div class="item" cdkDrag [cdkDragData]="item" *ngFor="let item of category.items; let i2 = index;">
+          <textarea matInput cdkTextareaAutosize placeholder="Je tu nějaké prázdno :(" (focusout)="editValue(i, i2, $event);">{{item}}</textarea>
+          <div class="controls">
+            <div class="options center disabled" matTooltip="Připravuje se"><mat-icon>settings</mat-icon></div>
+            <div class="delete center" matTooltip="Smazat item" (click)="remove(i, i2 + 1)"><mat-icon>delete</mat-icon></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="add-btn center" (click)="create('')">
+  <mat-icon>add</mat-icon>
+</div>
+
+<span style="position: absolute;bottom: 0;right:0;user-select:none;pointer-events:none;color:#565656;">Created by MasTerik</span>

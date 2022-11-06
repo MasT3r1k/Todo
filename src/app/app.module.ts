@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 
 @NgModule({
@@ -31,6 +34,8 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    DragDropModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

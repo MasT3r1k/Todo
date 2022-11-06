@@ -1,27 +1,58 @@
-# AngularTodo
+<h1 align="center">Todo list v Angularu</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
+- Jednoduchý systém k třídění svých povinností
+- Vytvořen v [Angularu](https://angular.io/)
+- Za pomoci [Angular-Material](https://material.angular.io/)
+- Používaný font [Livvic](https://fonts.google.com/specimen/Livvic)
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Ukázka
+#
+> Tu vidíme, jak celý todo list vypadá
+![HlavniStranka](/src/assets/readme/fullpage.png)
+#
+> Tu vidíme animaci přesunu itemu "Úkol c" z kategorie "Seznamu úkolů - 1" do kategorie "Seznam prací"
+![Presouvani](/src/assets/readme/moving.png)
+#
+> Každý item má taky svoje možnosti upravení (Nastavení - Připravuje se, Smazat - odebere item z kategorie)
+![MoznostiItemu](/src/assets/readme/item-options.png)
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Funkce
+#
+> <p>Rozdělení úkolů do kategorií</p>
+> <p>Přidávání vlastních kategorií, mazání vlastních kategorií</p>
+> <p> Přidávání itemů do kategorií, mazání itemů z kategorií</p>
+> <p> Přesouvání itemů v kategorii, přesouvání itemů mezi kategoriemi</p>
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Spuštění
+#
+### Potřebujete k spuštění
+- [Git](https://git-scm.com/) - K stáhnutí kódu
+- [Node](https://nodejs.org/en/) - K nainstalování balíčků
 
-## Running unit tests
+1. Stáhněte kód:
+```sh
+git clone https://github.com/MasT3r1k/Todo.git
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Nainstalujte potřebné balíčky:
+```sh
+npm install
+```
 
-## Running end-to-end tests
+### Teď se musíte rozhodnout jak to chcete spustit: 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Spuštění pro development
+```sh
+npm run start
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Buildnutí aplikace
+```sh
+npm run build
+```
